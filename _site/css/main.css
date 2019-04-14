@@ -1,0 +1,23 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Serif', serif;
+}
+
+.navbar-brand{
+    color: cadetblue !important;
+}
+
+.nav-link{
+    font-size: 17px !important;
+    margin-right: 16px !important;
+}
+
+.jumbo {
+    font-weight: 700 !important;
+    color: black !important;
+}
+
+.jumbotron{
+    background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png") !important;
+}
