@@ -1,17 +1,32 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+		{% include nav.html %}				
+				<div class="jumbotron jumbotron-fluid border-bottom border-warning">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-4 text-center">
+								<img src="{{ site.baseurl }}/images/posts/{{ page.image }}" class="img-thumbnail" style="max-width:250px">
 
-<article class="post">
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-
-  <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
-  </div>
-
-  {% include disqus.html %}
-</article>
+							</div>
+							<div class="col-md-8 text-center pt-5">
+									<h1 class="jumbo">{{page.title}}</h1>
+									<p class="lead">{{page.excerpt}}</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container" style="max-width:800px">
+					<p class="text-secondary"><ins>Published on {{ page.date | date: "%B %e, %Y" }}</ins></p>
+						{{content}}
+				</div>
+				<br><br>
+				{% include latest_posts.html %}
+				<br><br>
+				{% include footer.html %}
+				{% include analytics.html %}
+  </body>
+</html>

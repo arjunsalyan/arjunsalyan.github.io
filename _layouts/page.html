@@ -1,12 +1,21 @@
----
-layout: default
----
-
-<article class="page">
-
-  <h1>{{ page.title }}</h1>
-
-  <div class="entry">
-    {{ content }}
-  </div>
-</article>
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+		{% include nav.html %}				
+				<div class="jumbotron jumbotron-fluid border-bottom border-warning text-center">
+									<h1 class="jumbo">{{page.title}}</h1>
+					</div>
+				<div class="container" style="max-width:800px">
+					<br>
+						{{content}}
+				</div>
+				<br><br>
+				{% include latest_posts.html %}
+				<br><br>
+				{% include footer.html %}
+				{% include analytics.html %}
+  </body>
+</html>
