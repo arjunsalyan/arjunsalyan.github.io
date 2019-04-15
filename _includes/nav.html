@@ -1,17 +1,19 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+        <a class="navbar-brand mr-auto ml-auto d-lg-none" href="/"><span class="text-dark">arjun</span><span class="text-secondary">salyan.com</span></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
     
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/"><strong>HOME</strong> <span class="sr-only">(current)</span></a>
+                <li class="nav-item {% if page.home %}active{% endif %}">
+                    <a class="nav-link d-xl-none" href="/"><strong><i class="fas fa-home"></i></strong> <span class="sr-only">(current)</span></a>
+                    <a class="nav-link d-lg-block d-none" href="/"><img src="{{ site.baseurl }}/images/arjun_circle.png" style="max-width:50px"></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item {% if page.title == 'About' %}active{% endif %} pt-2">
                     <a class="nav-link" href="{{ site.baseurl }}/about"><strong>ABOUT ME</strong></a>
                 </li>
-                <li class="nav-item dropdown">
+                <li class="nav-item dropdown pt-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <strong>PROJECTS</strong>
                     </a>
@@ -22,7 +24,7 @@
                         <a class="dropdown-item" href="#">Number 3</a>
                     </div>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item pt-2">
                     <a class="nav-link" href="{{ site.baseurl }}/contact"><strong>LET'S CATCH UP!</strong></a>
                 </li>
             </ul>

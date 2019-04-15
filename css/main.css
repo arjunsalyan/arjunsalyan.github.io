@@ -19,7 +19,7 @@ body{
 }
 
 .jumbotron{
-    background-image: url("https://www.transparenttextures.com/patterns/dark-wall.png") !important;
+    background-image: url("/images/dark-wall.png") !important;
 }
 
 .latest-posts-link a{
@@ -58,3 +58,13 @@ body{
     color: black;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 700px) {
+    .display-4 {
+      font-size: 30px !important;
+    }
+
+    .social-jumbo a{ 
+        font-size: 30px !important;
+    }
+  }
