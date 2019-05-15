@@ -1,22 +1,87 @@
 ---
-layout: default
-home: True
+arjun: "Yes"
 ---
 
-  {% for post in site.posts %}
-    <article class="post pt-5 pb-5">
-      <div class="row">
-        <div class="col-lg-4 col-md-4 text-center">
-          <img src="{{ site.baseurl }}/images/posts/{{ post.image }}" style="max-width:65%">
+<!doctype html>
+<html lang="en">
+  <head>
+	  {% include meta.html %}
+      <style>
+        html{
+            height: 100%;
+        }
+
+        a{
+            text-decoration: none;
+            color: #34d058;
+        }
+
+        a:hover{
+            color: deeppink;
+        }
+
+        button{
+            background-color: black;
+            color: #34d058;
+            border: 0;
+        }
+
+        .home-image-item{
+            max-width: 250px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            html {
+                center-of-div: 40%;
+            }
+
+            .home-image {
+                text-align: center;
+                padding-top: 32px;
+                padding-bottom: 12px;
+            }
+
+            .home-image-item{
+                max-width: 180px;
+            }
+
+            .home-name{
+                text-align: center;
+                border: 0 !important;
+            }
+
+            .home-right{
+                text-align: center;
+            }
+
+
+        }
+      </style>
+  </head>
+  <body style="background-color: black;height: 100%">
+  <div class="container" style="max-width: 1000px;height: 100%">
+    <div class="row" style="height: 100%">
+        <div class="col-lg-6 col-md-6">
+            <div class="center-of-div home-image">
+                <img src="{{ site.baseurl }}/images/ArjunSalyan.jpg" class="img-thumbnail home-image-item">
+                <br>
+            </div>
         </div>
-        <div class="col-lg-8 col-md-8">
-            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-            <p class="text-secondary">Published on <ins>{{ post.date | date: "%B %e, %Y" }}</ins></p>
-              {{ post.excerpt }}
-            <a class="btn btn-warning float-right" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+        <div class="col-lg-6 col-md-6 text-light">
+            <div class="center-of-div home-right">
+                <h3 class="text-light border-bottom border-grey home-name">Arjun Salyan</h3>
+                <p class="text-muted">Developer | IIT (BHU), Varanasi</p>
+                <a href="/blog" style="font-size:16px"><button class="hvr-sweep-to-right">Blog ></button></a>
+                <a href="/about" style="font-size:16px;margin-left: 8px;"><button class="hvr-sweep-to-right">About ></button></a>
+                <a href="https://github.com/arjunsalyan" style="font-size:16px;margin-left: 8px"><button class="hvr-sweep-to-right">GitHub ></button></a><br><br>
+                <div class="bg-dark rounded" style="padding: 10px">
+                    <span class="text-muted">Ongoing Project</span>
+                    <h6 class="text-white-50">Google Summer Of Code <span class="text-muted">with</span> MacPorts</h6>
+                </div>
+            </div>
         </div>
-      </div>
-    </article>
-    <div class="bg-warning" style="height:4px"></div>
-  {% endfor %}
-</div>
+    </div>
+  </div>
+    {% include analytics.html %}
+  </body>
+</html>

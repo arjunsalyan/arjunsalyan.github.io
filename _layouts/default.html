@@ -1,34 +1,30 @@
 <!doctype html>
 <html lang="en">
   <head>
-
-    {% include meta.html %}
+	  {% include meta.html %}
   </head>
   <body>
+    {% include nav.html %}
+    <div class="jumbotron jumbotron-fluid border-bottom border-warning">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="{{ site.baseurl }}/images/ArjunSalyan.jpg" class="img-thumbnail" style="max-width:250px">
+                </div>
+                <div class="col-md-8 text-center pt-5">
+                    <h1 class="jumbo">Hi! I am Arjun Salyan</h1>
+                    <p class="lead">Student at IIT (BHU), Varanasi | Mathematician and Developer.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-			{% include nav.html %}
-
-				<div class="jumbotron jumbotron-fluid border-bottom border-warning">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-4 text-center">
-								<img src="{{ site.baseurl }}/images/ArjunSalyan.jpg" class="img-thumbnail" style="max-width:250px">
-
-							</div>
-							<div class="col-md-8 text-center pt-5">
-									<h1 class="jumbo">Hi! I am Arjun Salyan</h1>
-									<p class="lead">Student at IIT (BHU), Varanasi | Mathematician and Developer.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				{% include latest_posts.html %}
-				<br><br>
-				<div class="jumbotron jumbotron-fluid bg-warning p-5 text-center">
-					<h1 class="display-4">Do We Know Each Other Yet?</h1>
-					<div class="social-jumbo">
-						{% include social_urls.html %}
+    {% include latest_posts.html %}
+    <br><br>
+    <div class="jumbotron jumbotron-fluid bg-warning p-5 text-center">
+        <h1 class="display-4">Do We Know Each Other Yet?</h1>
+        <div class="social-jumbo">
+            {% include social_urls.html %}
 					</div>
 				</div>
 

@@ -1,0 +1,21 @@
+---
+layout: default
+home: True
+---
+
+  {% for post in site.posts %}
+    <article class="post pt-5 pb-5">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 text-center">
+          <img src="{{ site.baseurl }}/images/posts/{{ post.image }}" style="max-width:65%">
+        </div>
+        <div class="col-lg-8 col-md-8">
+            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <p class="text-secondary">Published on <ins>{{ post.date | date: "%B %e, %Y" }}</ins></p>
+              {{ post.excerpt }}
+            <a class="btn btn-warning float-right" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+        </div>
+      </div>
+    </article>
+    <div class="bg-warning" style="height:4px"></div>
+  {% endfor %}
