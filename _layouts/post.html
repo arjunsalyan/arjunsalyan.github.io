@@ -14,6 +14,12 @@
 							</div>
 							<div class="col-md-8 text-center pt-5">
 									<h1 class="jumbo">{{page.title}}</h1>
+									<p class="text-muted">Categories:
+										{% for category in page.categories %}
+											<a href="/category/{{ category}}">{{ category }}</a>
+											{% unless forloop.last %}&nbsp;{% endunless %}
+										{% endfor %}
+									</p>
 									<p class="lead">{{page.excerpt}}</p>
 							</div>
 						</div>
@@ -22,7 +28,30 @@
 				<div class="container" style="max-width:800px">
 					<p class="text-secondary"><ins>Published on {{ page.date | date: "%B %e, %Y" }}</ins></p>
 						{{content}}
+						<br>
+						<hr>
+						<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+var disqus_config = function () {
+	this.page.url = "https://arjunsalyan.github.io{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://arjunsalyan.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
 				</div>
+
 				<br><br>
 				{% include latest_posts.html %}
 				<br><br>

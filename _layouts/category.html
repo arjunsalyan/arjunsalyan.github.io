@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% include meta.html %}
+  </head>
+  <body>
+		{% include nav.html %}				
+				<div class="jumbotron jumbotron-fluid border-bottom border-warning text-center">
+                                    <h1 class="jumbo">{{page.category}}</h1>
+                                    <p>You are now viewing posts published under <u>{{page.category}}</u></p>
+					</div>
+                <div class="container">
+                    {{ content }}
+					<br>
+                    {% for post in site.categories[page.category] %}
+                    <article class="post pt-5 pb-5">
+                      <div class="row">
+                        <div class="col-lg-4 col-md-4 text-center">
+                          <img src="{{ site.baseurl }}/images/posts/{{ post.image }}" style="max-width:65%">
+                        </div>
+                        <div class="col-lg-8 col-md-8">
+                            <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+                            <p class="text-secondary">Published on <ins>{{ post.date | date: "%B %e, %Y" }}</ins></p>
+                              {{ post.excerpt }}
+                            <a class="btn btn-warning float-right" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+                        </div>
+                      </div>
+                    </article>
+                    <div class="bg-warning" style="height:4px"></div>
+                  {% endfor %}
+                </div>
+				<br><br>
+				{% include footer.html %}
+				{% include analytics.html %}
+  </body>
+</html>

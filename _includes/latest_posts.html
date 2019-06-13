@@ -6,8 +6,14 @@
                     <div class="card latest-post h-100">
                             <img src="{{ site.baseurl }}/images/posts/{{ post.image }}" class="card-img-top" alt="...">
                             <div class="card-body">
+                                <p class="text-muted">
+                                    {% for category in post.categories %}
+                                        <a href="/category/{{ category}}"><i>{{ category }}</i></a>
+                                            {% unless forloop.last %}&nbsp;{% endunless %}
+                                    {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
+                                </p>
                                 <h4 class="card-title latest-posts-link"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-                                <a href="#" class="btn btn-warning">Read More</a>
+                                <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-warning">Read More</a>
                             </div>
                         </div>
             </div>
