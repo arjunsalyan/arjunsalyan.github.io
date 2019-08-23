@@ -2,18 +2,18 @@
 body{
     padding: 0;
     margin: 0;
-    font-family: 'Noto Serif', serif;
+    font-family: 'B612', sans-serif;
     font-size: 18px;
-    letter-spacing: .5px;
+    line-height: 180%;
 }
 
 .navbar-brand{
-    color: cadetblue !important;
+    color: midnightblue !important;
 }
 
 .nav-link{
-    font-size: 17px !important;
-    margin-right: 16px !important;
+    font-size: 18px !important;
+    margin-right: 8px !important;
 }
 
 .jumbo {
