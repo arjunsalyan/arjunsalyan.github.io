@@ -1,0 +1,177 @@
+---
+layout: post
+title: "GSoC'19: Wrapping up the Project"
+image: macports-gsoc.png
+categories: GSoC'19
+excerpt: "As the three months of my GSoC'19 under MacPorts come to an end, here is the report of the project."
+comments: true
+---
+
+<h2 align="center">MacPorts Webapp Project Report</h2>
+<p align="center">GOOGLE SUMMER OF CODE 2019</p>
+
+The MacPorts web application, which has been implemented during Google Summer of Code 2019:
+
+1. Displays general information about all the ports.
+
+2. Fetches and displays build-history of the ports.
+
+3. Collects and displays installation statistics (system configurations and installed ports) from users who opt-in by installing the port mpstats.
+
+4. Makes available all the collected data through API.
+
+The application has been deployed at [ports.macports.org](https://ports.macports.org) and most of the code has been [merged](https://github.com/macports/macports-webapp). The app has a dedicated repository: [macports-webapp](https://github.com/macports/macports-webapp), and is written from scratch during the project.
+
+* * *
+
+
+### Work Done During GSoC:
+
+* Almost 99% of the work done by me is contained in the dedicated [macports-webapp](https://github.com/macports/macports-webapp) repository which started from zero. It has been discussed in more detail in the next section.
+
+* Work on [portindex2json.tcl](https://github.com/macports/macports-contrib/tree/master/portindex2json), improve its output to be fit for the webapp
+
+    * [https://github.com/macports/macports-contrib/pull/2](https://github.com/macports/macports-contrib/pull/2)
+
+    * [https://github.com/macports/macports-contrib/pull/3](https://github.com/macports/macports-contrib/pull/3)
+
+    * [https://github.com/macports/macports-contrib/pull/5](https://github.com/macports/macports-contrib/pull/5)
+
+* Minor changes to [mpstats](https://github.com/macports/macports-ports/tree/master/sysutils/mpstats), and add a new testing subport
+
+    * [https://github.com/macports/macports-ports/pull/4521](https://github.com/macports/macports-ports/pull/4521)
+
+* [mprsyncup](https://github.com/macports/macports-infrastructure/blob/master/jobs/mprsyncup) job, start generating portindex.json and distributing through rsync
+
+    * [https://github.com/macports/macports-infrastructure/pull/10](https://github.com/macports/macports-infrastructure/pull/10)
+
+    * [https://github.com/macports/macports-infrastructure/pull/12](https://github.com/macports/macports-infrastructure/pull/12)
+
+* * *
+
+
+### Live Pages from the App
+
+* All pages of the website are responsive and work well on all screen sizes, including mobile phones.
+
+**Homepage**
+
+<div class="row">
+    <div class="col-md-7"><img src="/images/posts/gsoc19/homepage.png" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col-md-5">
+    <ul>
+        <li>Allows real-time searching by port name or by description</li>
+        <li>Displays top 10 requested ports in the last 30 days</li>
+    </ul>
+    </div>
+</div>
+
+* * *
+
+**Port detail page**
+<div class="row">
+    <div class="col-md-7"><img src="/images/posts/gsoc19/portsummary.png" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col-md-5">
+    <ul>
+        <li>Port health intuitively displays the status of latest build on each builder.</li>
+        <li>AJAX based tabs allow easy switching between various information.</li>
+        <li>Real time search is provided to quickly find another port.</li>
+    </ul>
+    </div>
+</div>
+
+* * *
+
+**Port build history**
+<div class="row">
+    <div class="col-md-7"><img src="/images/posts/gsoc19/portbuilds.png" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col-md-5">
+    <ul>
+        <li>Multiple filters can be applied simultaneously.</li>
+        <ul>
+            <li>Filter by status of builds</li>
+            <li>Filter by builders</li>
+        </ul>
+        <li>Filters are AJAX based and can be applied without page refresh.</li>
+    </ul>
+    </div>
+</div>
+
+* * *
+
+**Port Installation Statistics**
+<div class="row">
+    <div class="col-md-4"><img src="/images/posts/gsoc19/portstats1.png" class="img-fluid img-thumbnail">
+        <ul>
+        <li>Allows to change duration conveniently.</li>
+        </ul>
+    </div>
+    <div class="col-md-4"><img src="/images/posts/gsoc19/portstats2.png" class="img-fluid img-thumbnail">
+        <ul>
+        <li>Port Versions vs Users</li>
+        <li>OS Version, Build Architecture and STDLIB vs Users</li>
+        <li>OS Version and Xcode Version vs Users</li>
+        <li>OS Version and Command Line Tools Version vs Users</li>
+        </ul>
+    </div>
+    <div class="col-md-4"><img src="/images/posts/gsoc19/portstats3.png" class="img-fluid img-thumbnail">
+        <ul>
+            <li>Port installations vs Months</li>
+            <li>Port versions installed vs Months</li>
+        </ul>
+    </div>
+</div>
+
+* * *
+
+**All Builds**
+<div class="row">
+    <div class="col-md-7"><img src="/images/posts/gsoc19/allbuilds.png" class="img-fluid img-thumbnail">
+    </div>
+    <div class="col-md-5">
+    <ul>
+        <li>Multiple filters can be applied simultaneously.</li>
+            <ul>
+                <li>Filter by port name</li>
+                <li>Filter by status of builds</li>
+                <li>Filter by builders</li>
+            </ul>
+        <li>AJAX based pagination.</li>
+        <li>Filters are AJAX based and can be applied without page refresh.</li>
+    </ul>
+    </div>
+</div>
+
+
+
+
+
+
+* * *
+
+
+### To do
+
+Most of the planned features have been implemented in the app. But the app has great scope for addition of new features. Some improvements have also been suggested, thanks to the active MacPorts community.
+
+**Higher priority:**
+
+* Livecheck
+
+* Enhanced searching: more filters and ranked search results
+
+* Reliable submission of stats: try again if the command does not run within the week or fails
+
+* Include port versions in build history
+
+[More](https://docs.google.com/document/d/1TqNHm3NrtLDelWqY7P4pZyTMZDJrlsPymFZklzV2t24/edit#)
+
+* * *
+
+
+### Others
+
+* [Experience of GSoC’19 application period](https://arjunsalyan.github.io/GSoC'19-as-it-happened-so-far/).
