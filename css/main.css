@@ -16,6 +16,11 @@ body{
     margin-right: 8px !important;
 }
 
+.serif{
+    font-size: 20px !important;
+    color: blue !important;
+}
+
 .jumbo {
     font-weight: 700 !important;
     color: black !important;
