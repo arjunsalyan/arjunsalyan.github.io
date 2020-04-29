@@ -9,7 +9,7 @@ home: True
       <hr>
       {% for post in site.posts %}
     <div class="post-list-item">
-            <h1><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <h6><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h6>
             <p class="text-muted meta-post">
                 {% for category in post.categories %}
                     <a href="/category/{{ category}}"><i>{{ category }}</i></a>
@@ -27,7 +27,7 @@ home: True
       <hr>
       {% for post in site.posts %}
     <div class="post-list-item">
-            <h1><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <h6><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h6>
             <p class="text-muted meta-post">
                 {% for category in post.categories %}
                     <a href="/category/{{ category}}"><i>{{ category }}</i></a>

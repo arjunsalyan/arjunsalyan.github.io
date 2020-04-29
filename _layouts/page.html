@@ -6,25 +6,51 @@
   </head>
   <body>
 		{% include nav.html %}	
-		
-		<div class="content container" style="max-width: 900px;">
-			<div class="post-title">
-					<h1 class="text-center">{{page.title}}</h1>
-					<div class="post-meta">
-						<p class="post-meta-avatar">
-						  <span></span>
-						  <span><img src="/images/arjun_circle.png" style="height:40px"></span>
-						</p>
-						<p class="post-meta-text">
-						  <span></span>
-						  <span style="font-size: 14px;" class="text-muted" >Arjun Salyan
-						</span>
-						</p>
-					  </div>
-				</div>
-				<div class="p-2 post-content">
-					{{content}}
-					<br>
+		<div class="container bg-success sep-bar mt-3"></div>
+		<div class="container bg-site shadow-sm text-center" style="padding: 20px;">
+			  <h1 class="heading-site">{{page.title}}</h1>
+		</div>
+	</div>
+	</div>
+	<div class="container pt-3">
+		<div class="post-meta">
+			<p class="post-meta-avatar">
+			  <span></span>
+			  <span><img src="/images/arjun_circle.png" style="height:40px"></span>
+			</p>
+			<p class="post-meta-text">
+			  <span></span>
+			  <span style="font-size: 14px;" class="text-muted" >Arjun Salyan
+			</span>
+			</p>
+		  </div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 bg-white text-post shadow-sm pt-4">
+				{{content}}
+			</div>
+			<div class="col-md-4">
+					<h1 class="heading-site my-2">Featured Posts</h1>
+					<hr>
+					{% for post in site.posts %}
+				  <div class="post-list-item">
+						  <h6><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h6>
+						  <p class="text-muted meta-post">
+							  {% for category in post.categories %}
+								  <a href="/category/{{ category}}"><i>{{ category }}</i></a>
+									  {% unless forloop.last %}&nbsp;{% endunless %}
+							  {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
+						  </p>
+							<p class="text-post">{{ post.excerpt }}</p>
+						<a class="btn btn-light btn-sm ml-auto" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+						</div>
+				  <hr>
+				{% endfor %}
+					<hr>
+			</div>
+		</div>
+	</div>
 				<br><br>
 				{% include latest_posts.html %}
 				<br><br>

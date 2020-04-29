@@ -10,6 +10,10 @@ body{
 	max-width: 1140px !important;
 }
 
+.container-fluid{
+	max-width: 980px;
+}
+
 .navbar {
 	background: linear-gradient(to right, #51AB99 ,#61C173) !important;
 	height: 80px !important;
@@ -66,7 +70,7 @@ body{
 }
 
 .heading-site {
-	font-size: 32px;
+	font-size: 28px;
 	color: rgba(0, 0, 0, 0.7);
 	padding: 4px;
 	font-family: 'Montserrat', 'sans-serif' !important;
@@ -81,11 +85,10 @@ hr {
 	font-size: 25px !important;
 	font-weight: 700;
 	font-family: 'Montserrat', 'serif' !important;
+	line-height: normal !important;
+	margin-top: 2px !important;
 }
 
-.title-post:hover {
-	color: #035e49;
-}
 
 .meta-post {
 	font-size: 12px;
@@ -98,48 +101,13 @@ hr {
 }
 
 .text-post {
-	color: rgba(0, 0, 0, 0.8);
+	color: rgba(0, 0, 0, 0.7);
 }
+
 
 .post-list-item{
 	margin-top: 12px;
 	margin-bottom: 12px;
-}
-
-.post h1 {
-  font-family: 'Noto Sans JP', 'sans-serif' !important;
-	font-size: 35px !important;
-	font-weight: 500 !important;
-}
-
-.post-content, .excerpt {
-	color: rgba(0, 0, 0, 0.86) !important;
-	letter-spacing: normal;
-  font-size: 19px !important;
-  font-weight: 300;
-	font-family: 'Noto Sans JP', 'sans-serif' !important;
-}
-
-
-.post-page-image {
-	max-width: 100px;
-}
-
-@media only screen and (max-width: 700px){
-	.post-title {
-		margin-top: 16px;
-	}
-
-	.post-title h1 {
-		font-size: 28px;
-	}
-}
-
-.post-content {
-	color: rgba(0, 0, 0, 0.86) !important;
-	letter-spacing: normal;
-	font-size: 19px !important;
-	font-family: 'Noto Sans JP', 'sans-serif' !important;
 }
 
 .post-meta > p {
