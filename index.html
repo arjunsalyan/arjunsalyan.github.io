@@ -1,0 +1,45 @@
+---
+layout: default
+home: True
+---
+<div class="container">
+  <div class="row">
+    <div class="col-md-7 bg-white shadow-sm">
+      <h1 class="heading-site my-2">Latest Posts</h1>
+      <hr>
+      {% for post in site.posts %}
+    <div class="post-list-item">
+            <h1><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <p class="text-muted meta-post">
+                {% for category in post.categories %}
+                    <a href="/category/{{ category}}"><i>{{ category }}</i></a>
+                        {% unless forloop.last %}&nbsp;{% endunless %}
+                {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
+            </p>
+              <p class="text-post">{{ post.excerpt }}</p>
+          <a class="btn btn-light btn-sm ml-auto" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+          </div>
+    <hr>
+  {% endfor %}
+    </div>
+    <div class="col-md-5">
+      <h1 class="heading-site my-2">Featured Posts</h1>
+      <hr>
+      {% for post in site.posts %}
+    <div class="post-list-item">
+            <h1><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+            <p class="text-muted meta-post">
+                {% for category in post.categories %}
+                    <a href="/category/{{ category}}"><i>{{ category }}</i></a>
+                        {% unless forloop.last %}&nbsp;{% endunless %}
+                {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
+            </p>
+              <p class="text-post">{{ post.excerpt }}</p>
+          <a class="btn btn-light btn-sm ml-auto" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+          </div>
+    <hr>
+  {% endfor %}
+      <hr>
+    </div>
+  </div>
+</div>  

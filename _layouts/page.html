@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+		{% include analytics.html %}
+    {% include meta.html %}
+  </head>
+  <body>
+		{% include nav.html %}	
+		
+		<div class="content container" style="max-width: 900px;">
+			<div class="post-title">
+					<h1 class="text-center">{{page.title}}</h1>
+					<div class="post-meta">
+						<p class="post-meta-avatar">
+						  <span></span>
+						  <span><img src="/images/arjun_circle.png" style="height:40px"></span>
+						</p>
+						<p class="post-meta-text">
+						  <span></span>
+						  <span style="font-size: 14px;" class="text-muted" >Arjun Salyan
+						</span>
+						</p>
+					  </div>
+				</div>
+				<div class="p-2 post-content">
+					{{content}}
+					<br>
+				<br><br>
+				{% include latest_posts.html %}
+				<br><br>
+				{% include footer.html %}
+				</div>
+  </body>
+</html>

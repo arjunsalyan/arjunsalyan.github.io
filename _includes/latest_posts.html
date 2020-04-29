@@ -1,0 +1,22 @@
+<div class="container text-center">
+        <h4>Latest Posts from the Blog</h4><hr>
+        <div class="row">
+            {% for post in site.posts limit:2 offset: 0 %}
+            <div class="col-lg-4 col-md-4 pt-2">
+                    <div class="card latest-post h-100">
+                            <img style="max-width: 200px" src="{{ site.baseurl }}/images/posts/{{ post.image }}" class="card-img-top mr-auto ml-auto" alt="...">
+                            <div class="card-body">
+                                <p class="text-muted">
+                                    {% for category in post.categories %}
+                                        <a href="/category/{{ category}}"><i>{{ category }}</i></a>
+                                            {% unless forloop.last %}&nbsp;{% endunless %}
+                                    {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
+                                </p>
+                                <h4 class="card-title latest-posts-link"><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+                                <a href="{{ site.baseurl }}{{ post.url }}" class="btn btn-light">Read More</a>
+                            </div>
+                        </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>

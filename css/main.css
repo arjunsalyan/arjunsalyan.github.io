@@ -1,0 +1,163 @@
+body{
+    padding: 0;
+	margin: 0;
+	background: #F1F5F8;
+    font-family: 'Montserrat', sans-serif;
+	font-size: 17px;
+}
+
+.container{
+	max-width: 1140px !important;
+}
+
+.navbar {
+	background: linear-gradient(to right, #51AB99 ,#61C173) !important;
+	height: 80px !important;
+	padding: 8px !important;
+}
+
+.nav-link{
+    font-size: 16px !important;
+	margin-right: 8px !important;
+	color: whitesmoke !important;
+	text-decoration: underline !important;
+}
+
+.nav-link:hover {
+	color: white !important;
+	text-decoration: underline !important;
+}
+
+.logo {
+	max-width: 220px;
+}
+
+@media only screen and (max-width){
+	.logo {
+		max-width: 160px;
+	}
+}
+
+.default-picture {
+  height: 150px !important;
+}
+
+.sep-bar {
+	height: 6px;
+	width: 100%;
+  }
+
+.bg-site {
+	background: #e1f4f0;
+}
+
+.text-site {
+	color: #035e49 !important;
+	font-size: 16px !important;
+	font-weight: 500;
+	font-family: 'Montserrat', 'sans-serif' !important;
+}
+
+.title-site {
+	color: #035e49 !important;
+	font-size: 24px !important;
+	font-weight: 500;
+	font-family: 'Montserrat', 'sans-serif' !important;
+}
+
+.heading-site {
+	font-size: 32px;
+	color: rgba(0, 0, 0, 0.7);
+	padding: 4px;
+	font-family: 'Montserrat', 'sans-serif' !important;
+}
+
+hr {
+	margin: 0 !important;
+}
+
+.title-post {
+	color: #035e49 !important;
+	font-size: 25px !important;
+	font-weight: 700;
+	font-family: 'Montserrat', 'serif' !important;
+}
+
+.title-post:hover {
+	color: #035e49;
+}
+
+.meta-post {
+	font-size: 12px;
+	margin-bottom: 2px;
+	margin-top: -6px;
+}
+
+.meta-post a {
+	color: seagreen;
+}
+
+.text-post {
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.post-list-item{
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+.post h1 {
+  font-family: 'Noto Sans JP', 'sans-serif' !important;
+	font-size: 35px !important;
+	font-weight: 500 !important;
+}
+
+.post-content, .excerpt {
+	color: rgba(0, 0, 0, 0.86) !important;
+	letter-spacing: normal;
+  font-size: 19px !important;
+  font-weight: 300;
+	font-family: 'Noto Sans JP', 'sans-serif' !important;
+}
+
+
+.post-page-image {
+	max-width: 100px;
+}
+
+@media only screen and (max-width: 700px){
+	.post-title {
+		margin-top: 16px;
+	}
+
+	.post-title h1 {
+		font-size: 28px;
+	}
+}
+
+.post-content {
+	color: rgba(0, 0, 0, 0.86) !important;
+	letter-spacing: normal;
+	font-size: 19px !important;
+	font-family: 'Noto Sans JP', 'sans-serif' !important;
+}
+
+.post-meta > p {
+    display: inline-block;
+    vertical-align: middle;
+}
+.post-meta > p > span {
+    display: inline-block;
+    vertical-align: middle;
+}
+.post-meta > p > span:first-child {
+    height: 40px;
+}
+
+.center-of-div{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+}
