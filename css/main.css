@@ -108,6 +108,13 @@ hr {
 
 }
 
+.text-post-home {
+	color: rgba(0, 0, 0, 0.75);
+	font-family: 'Montserrat', 'serif' !important;
+	font-size: 17px !important;
+	line-height: 1.2;
+
+}
 
 .post-list-item{
 	margin-top: 12px;

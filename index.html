@@ -16,7 +16,7 @@ home: True
                         {% unless forloop.last %}&nbsp;{% endunless %}
                 {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
             </p>
-              <p class="text-post">{{ post.excerpt }}</p>
+              <p class="text-post-home">{{ post.excerpt }}</p>
           <a class="btn btn-light btn-sm ml-auto" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
           </div>
     <hr>
@@ -34,7 +34,7 @@ home: True
                         {% unless forloop.last %}&nbsp;{% endunless %}
                 {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
             </p>
-              <p class="text-post">{{ post.excerpt }}</p>
+              <p class="text-post-home">{{ post.excerpt }}</p>
           <a class="btn btn-light btn-sm ml-auto" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
           </div>
     <hr>
