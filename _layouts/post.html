@@ -6,13 +6,11 @@
   </head>
   <body>
 	{% include nav.html %}	
-	<div class="container bg-success sep-bar mt-3"></div>
-	<div class="container bg-site shadow-sm" style="padding-left: 8px;padding-right: 8px;padding-top: 16px;padding-bottom: 16px;">
+	<div class="container-fluid bg-success sep-bar mt-3" style="max-width: 800px;"></div>
+	<div class="container-fluid bg-site shadow-sm" style="max-width: 800px; padding-left: 8px;padding-right: 8px;padding-top: 16px;padding-bottom: 16px;">
 		  <h1 class="heading-site">{{page.title}}</h1>
-	</div>
-</div>
-</div>
-<div class="container pt-3">
+		  <hr>
+			<br>
 	<div class="post-meta">
 		<p class="post-meta-avatar">
 		  <span></span>
@@ -21,7 +19,7 @@
 		<p class="post-meta-text">
 		  <span></span>
 		  <span style="font-size: 14px;" class="text-muted" >Arjun Salyan | {{ page.date | date: "%B %e, %Y" }}<br>
-			Categories:
+			<strong>Categories:</strong>
 			{% for category in page.categories %}
 				<a href="/category/{{ category}}">{{ category }}</a>
 				{% unless forloop.last %}&nbsp;{% endunless %}
@@ -30,8 +28,11 @@
 		</p>
 	  </div>
 </div>
-<div class="container pt-4 bg-white shadow text-post">
-			{{content}}
+<br>
+<div class="container-fluid py-4 bg-white text-post" style="max-width: 800px;">
+		{{content}}
+	</div><br>
+			
 		<!--
 		<div class="col-md-4">
 				<h1 class="heading-site my-2">Featured Posts</h1>
@@ -53,10 +54,7 @@
 				<hr>
 		</div>
 	-->
-	</div>
-	<hr>
-</div>
-			<div class="container">
+			<div class="container-fluid" style="max-width: 800px;">
 			<div id="disqus_thread"></div>
 			{% include latest_posts.html %}
 			<br><br>
