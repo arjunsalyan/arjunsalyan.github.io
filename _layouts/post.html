@@ -24,8 +24,7 @@
 		  <span style="font-size: 14px;" class="text-muted" >Arjun Salyan | {{ page.date | date: "%B %e, %Y" }}<br>
 			<strong>Categories:</strong>
 			{% for category in page.categories %}
-				<a href="/category/{{ category}}">{{ category }}</a>
-				{% unless forloop.last %}&nbsp;{% endunless %}
+				<a href="/category/{{ category}}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
 			{% endfor %}
 		</span>
 		</p>
