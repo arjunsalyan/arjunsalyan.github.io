@@ -1,144 +1,113 @@
 body{
     padding: 0;
 	margin: 0;
-	background: #F1F5F8;
-    font-family: 'Montserrat', sans-serif;
 	font-size: 17px;
+	font-family: 'Libre Baskerville', serif; ;
 }
 
 h1, h2, h3, h4, h5, h6{
-	color: black;
+	color: #404040;
 	font-weight: 600;
+	font-family: 'Libre Baskerville', serif;
 }
 
-.container{
-	max-width: 1140px !important;
+h1 {
+	font-size: calc(26px + (46 - 26) * ((100vw - 300px) / (1600 - 300)));
+  }
+
+p {
+	color: #404040;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 16px !important;
+}
+
+.site-home-nav > li > a {
+	color: #404040 !important;
+}
+
+.site-home-nav > li > a:hover {
+	color: cadetblue !important;
+}
+
+.text-underlined {
+	text-decoration: underline;
+}
+
+.text-italic {
+	font-style: italic;
+}
+
+.text-site-sec {
+	color: cadetblue !important;
+}
+
+.bg-sec {
+	background-color: #efefef !important;
+}
+
+.site-bottom-border {
+	border-bottom: 1px cadetblue solid;
+}
+
+.site-border {
+	border: 1px cadetblue solid;
+}
+
+.social-icons-hero > a {
+	font-size: 40px !important;
+	color: cadetblue;
+}
+
+.social-icons-hero > a:hover {
+	color: black;
+}
+
+.post-list-item > a {
+	color: #404040 !important;
+	font-size: 28px !important;
+	font-weight: 700;
+	font-family: 'Libre Baskerville', serif !important;
 }
 
 .container-fluid{
 	max-width: 980px;
 }
 
-.navbar {
-	background: linear-gradient(to right, #51AB99 ,#61C173) !important;
-	height: 80px !important;
-	padding: 8px !important;
-}
 
-.nav-link{
-    font-size: 16px !important;
-	margin-right: 8px !important;
-	color: whitesmoke !important;
-	text-decoration: underline !important;
-}
-
-.nav-link:hover {
-	color: white !important;
-	text-decoration: underline !important;
-}
-
-.logo {
-	max-width: 220px;
-}
-
-@media only screen and (max-width){
-	.logo {
-		max-width: 160px;
-	}
-}
-
-.default-picture {
-  height: 150px !important;
-}
-
-.sep-bar {
-	height: 6px;
-	width: 100%;
-  }
-
-.bg-site {
-	background: #e1f4f0;
-}
-
-.text-site {
-	color: #035e49 !important;
-	font-size: 16px !important;
-	font-weight: 500;
-	font-family: 'Montserrat', 'sans-serif' !important;
-}
-
-.title-site {
-	color: #035e49 !important;
-	font-size: 24px !important;
-	font-weight: 500;
-	font-family: 'Montserrat', 'sans-serif' !important;
-}
-
-.heading-site {
-	font-size: 28px;
-	color: rgba(0, 0, 0, 0.7);
-	padding: 4px;
-	font-family: 'Montserrat', 'sans-serif' !important;
-}
-
-hr {
-	margin: 0 !important;
-}
-
-.title-post {
-	color: #035e49 !important;
-	font-size: 25px !important;
-	font-weight: 700;
-	font-family: 'Montserrat', 'serif' !important;
-	line-height: normal !important;
-	margin-top: 2px !important;
-}
-
-
-.meta-post {
+.post-list-meta {
 	font-size: 12px;
 	margin-bottom: 2px;
 	margin-top: -6px;
 }
 
-.meta-post a {
-	color: seagreen;
-}
-
-.text-post {
-	color: rgba(0, 0, 0, 0.8);
-	font-family: 'Montserrat', 'serif' !important;
-	font-size: 20px !important;
-	line-height: 1.2;
-
-}
-
-.text-post-home {
-	color: rgba(0, 0, 0, 0.75);
-	font-family: 'Montserrat', 'serif' !important;
-	font-size: 17px !important;
-	line-height: 1.2;
-
+.post-list-meta > a {
+	color: cadetblue;
 }
 
 .post-list-item{
-	margin-top: 12px;
-	margin-bottom: 12px;
+	margin-top: 32px;
+	margin-bottom: 32px;
 }
 
 .post-meta > p {
     display: inline-block;
-    vertical-align: middle;
+	vertical-align: middle;
 }
+
+.post-meta a {
+	color: cadetblue;
+}
+
 .post-meta > p > span {
     display: inline-block;
     vertical-align: middle;
 }
+
 .post-meta > p > span:first-child {
     height: 40px;
 }
 
-.center-of-div{
+.center-of-div {
     position: relative;
     top: 50%;
     left: 50%;
@@ -146,8 +115,19 @@ hr {
     -webkit-transform: translateX(-50%) translateY(-50%);
 }
 
+.post-content > p {
+	color: #2b2b2b !important;
+	font-size: 18px !important;
+	font-family: 'Libre Baskerville', serif !important;
+}
+
+.post-content > h1, h2, h3, h4, h5, h6 {
+	color: black !important;
+	font-family: 'Libre Baskerville', serif !important;
+}
+
 .highlight .hll { background-color: #333333 }
-.highlight  { background: #111111; color: #ffffff; margin-left: -16px; margin-right: -16px; padding: 8px 16px; font-size: 16px;}
+.highlight  { background: #111111; color: #ffffff; padding: 8px 16px; font-size: 16px;}
 .highlight .c { color: #008800; font-style: italic; background-color: #0f140f } /* Comment */
 .highlight .err { color: #ffffff } /* Error */
 .highlight .esc { color: #ffffff } /* Escape */

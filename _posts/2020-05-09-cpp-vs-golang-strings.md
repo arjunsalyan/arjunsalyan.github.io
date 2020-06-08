@@ -15,7 +15,6 @@ We will start with very basic, but by the end, things will get pretty interestin
 
 ### Difference in definition
 ---
-<br>
 #### In C++:
 Similar to C, in C++ a string can be simply defined as an array of character bytes. Let's see the simple example, note the terminating null character `'\0'` at the last index in the second definition. However, in the first definition, the compiler automatically adds the terminating null character for us.
 
@@ -82,7 +81,6 @@ Wait, 73? Yes, 73. Remember, we discussed that the characters are stored as thei
 <br>
 ### Traversing the strings (code point and rune)
 ---
-<br>
 It is straightword in C++:, let's see a simple example.
 ```c
 string str = "Hello, World!";

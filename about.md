@@ -9,7 +9,7 @@ Yes, I did consider writing this page in third person. But I wanted to talk with
 </div>
 </div>
 <br>
-<div class="text-justify">
+<div class="text-justify post-content">
 I am an engineering student actively involved in web and mobile development (django, react, express), in short, I am a full-stack developer. I do freelancing, I do open source, I do college projects, I intern with companies and I am hoping to get hired after college. I have been doing this since high school, and yeah I find myself in a position to also write about these things- so I blog. Cloud is the new way to go forward, and luckily I happen to be a Cloud-Native Developer with a good understanding of system design, storage systems and forgive me for this: Azure, AWS and GCP.
 </div>
 <br>

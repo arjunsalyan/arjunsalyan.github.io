@@ -10,8 +10,6 @@
 		<div class="container bg-site shadow-sm text-center" style="padding: 20px;">
 			  <h1 class="heading-site">{{page.title}}</h1>
 		</div>
-	</div>
-	</div>
 	<div class="container pt-3">
 		<div class="post-meta">
 			<p class="post-meta-avatar">
@@ -20,30 +18,29 @@
 			</p>
 			<p class="post-meta-text">
 			  <span></span>
-			  <span style="font-size: 14px;" class="text-muted" >Arjun Salyan
+			  <span style="font-size: 16px;" class="text-muted" >Arjun Salyan
 			</span>
 			</p>
 		  </div>
 	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 bg-white text-post shadow-sm pt-4">
+			<div class="col-md-8 bg-white shadow-sm pt-4">
 				{{content}}
 			</div>
 			<div class="col-md-4">
-					<h1 class="heading-site my-2">Featured Posts</h1>
+					<h3 class="my-2">Latest Posts</h3>
 					<hr>
 					{% for post in site.posts %}
 				  <div class="post-list-item">
-						  <h6><a class="title-post" href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h6>
-						  <p class="text-muted meta-post">
+						  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+						  <p class="text-muted post-list-meta">
 							  {% for category in post.categories %}
 								  <a href="/category/{{ category}}"><i>{{ category }}</i></a>
-									  {% unless forloop.last %}&nbsp;{% endunless %}
+									  {% unless forloop.last %}, {% endunless %}
 							  {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
 						  </p>
-							<p class="text-post">{{ post.excerpt }}</p>
-						<a class="btn btn-light btn-sm ml-auto" href="{{ site.baseurl }}{{ post.url }}">Read More</a>
+							<p>{{ post.excerpt }}</p>
 						</div>
 				  <hr>
 				{% endfor %}
@@ -51,8 +48,6 @@
 			</div>
 		</div>
 	</div>
-				<br><br>
-				{% include latest_posts.html %}
 				<br><br>
 				{% include footer.html %}
 				</div>
