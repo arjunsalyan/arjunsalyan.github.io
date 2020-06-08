@@ -46,7 +46,7 @@ p {
 }
 
 .site-bottom-border {
-	border-bottom: 1px cadetblue solid;
+	border-bottom: 1px cadetblue dashed;
 }
 
 .site-border {
