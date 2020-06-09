@@ -7,13 +7,13 @@
   <body>
 		{% include nav.html %}				
 		<div class="container bg-site shadow-sm text-center" style="padding: 20px;">
-        <h1 class="heading-site">Category: <span class="text-underlined">{{page.category}}</span></h1>
-        <p>You are now viewing the posts published under {{ page.category }}.</p>
+        <h1 class="heading-site">Blog</h1>
+        <p>You are now viewing all the posts. You can also filter the posts by categories.</p>
 		</div>
                 <div class="container">
                     {{ content }}
 					<br>
-                    {% for post in site.categories[page.category] %}
+                    {% for post in site.posts %}
                     <article class="post-list-item">
                       <div class="row">
                         <div class="col-lg-4 col-md-4 text-center">

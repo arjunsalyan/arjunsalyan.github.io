@@ -31,10 +31,10 @@
 			<div class="col-md-4 mt-5 mt-md-2">
 					<h4 class="my-2 my-md-0 text-site-sec">Latest Posts</h4>
 					<hr>
-					{% for post in site.posts|limit:3 %}
+					{% for post in site.posts limit:3 offset: 0 %}
 				  <div class="post-list-item">
 						  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-						  <p class="text-muted post-list-meta">
+						  <p style="font-size: 13px !important;" class="text-muted post-list-meta my-1">
 							  {% for category in post.categories %}
 								  <a href="/category/{{ category}}"><i>{{ category }}</i></a>
 									  {% unless forloop.last %}, {% endunless %}
@@ -44,11 +44,10 @@
 						</div>
 				  <hr>
 				{% endfor %}
-					<hr>
 			</div>
 		</div>
 	</div>
-				<br><br>
+				<br>
 				{% include footer.html %}
 				</div>
   </body>

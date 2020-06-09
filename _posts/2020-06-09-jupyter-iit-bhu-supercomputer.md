@@ -33,7 +33,7 @@ $ ssh -x username@server_address
 ```
 <br>
 I cannot help you with the login details `(username@server_address)`, they are user and server specific. For IIT (BHU) folks, you can find these details in the emails you receive from the ParamShivay team.
-You will be prompted to enter your password and in some cases a human verification (where you are asked to enter a string as displayed on the screen.)
+You will be prompted to enter your password and in some cases a human verification might be needed (where you are asked to enter a string as displayed on the screen).
 
 Once you are in the system, you will see something like this:
 ```bash

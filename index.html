@@ -9,7 +9,7 @@ home: True
       <h4 class="text-underlined text-site-sec">Latest Posts</h4>
       {% for post in site.posts %}
     <div class="post-list-item">
-        <div style="width: 50%;" class="text-muted post-list-meta border rounded p-2 my-2">
+        <div style="width: 60%;" class="text-muted post-list-meta border rounded p-2 my-2">
           {% for category in post.categories %}
               <a href="/category/{{ category}}"><i>{{ category }}</i></a>
                   {% unless forloop.last %}, {% endunless %}
