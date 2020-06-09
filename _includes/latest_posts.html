@@ -9,7 +9,7 @@
                                 <p style="font-size: 15px;" class="text-muted post-list-meta">
                                     {% for category in post.categories %}
                                         <a href="/category/{{ category}}"><i>{{ category }}</i></a>
-                                            {% unless forloop.last %}&nbsp;{% endunless %}
+                                            {% unless forloop.last %}, {% endunless %}
                                     {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
                                 </p>
                                 <h4><a style="color: #404040;" href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
