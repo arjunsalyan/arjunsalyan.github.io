@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Golang vs Object Oriented Pragramming Languages"
+title: "Golang vs Object Oriented Programming Languages"
 image: oops-methods-attr.png
 categories: ["GO", "OOPs"]
 excerpt: "A comprehensive discussion on the basics of OOPS and how differently they are implemented in Golang."

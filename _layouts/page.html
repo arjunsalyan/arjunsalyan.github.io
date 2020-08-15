@@ -6,30 +6,27 @@
   </head>
   <body>
 		{% include nav.html %}	
-		<div class="container bg-success sep-bar mt-3"></div>
-		<div class="container bg-site shadow-sm text-center" style="padding: 20px;">
+		<div class="container text-center" style="padding: 20px;">
 			  <h1 class="heading-site">{{page.title}}</h1>
 		</div>
-	<div class="container pt-3">
-		<div class="post-meta">
-			<p class="post-meta-avatar">
-			  <span></span>
-			  <span><img src="/images/arjun_circle.png" style="height:40px"></span>
-			</p>
-			<p class="post-meta-text">
-			  <span></span>
-			  <span style="font-size: 16px;" class="text-muted" >Arjun Salyan
-			</span>
-			</p>
-		  </div>
-	</div>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 bg-white shadow-sm bg-sec p-4 post-content">
+			<div class="col-md-8 rounded-lg shadow-sm bg-article post-content pb-4 px-3">
+				<div class="post-meta py-3 px-3 mb-2 rounded-top" style="box-shadow: inset 0 3px 10px rgba(0,0,0,0.4); background-color: #001210; margin-left: -16px; margin-right: -16px">
+					<p class="post-meta-avatar mb-0">
+					  <span></span>
+					  <span><img src="/images/arjun_circle.png" style="height:50px"></span>
+					</p>
+					<p class="post-meta-text mb-0">
+					  <span></span>
+					  <span style="font-size: 16px;" class="text-warning" >Arjun Salyan
+					</span>
+					</p>
+				  </div>
 				{{content}}
 			</div>
 			<div class="col-md-4 mt-5 mt-md-2">
-					<h4 class="my-2 my-md-0 text-site-sec">Latest Posts</h4>
+					<h3 class="my-2 my-md-0 text-dark">Latest Posts</h3>
 					<hr>
 					{% for post in site.posts limit:3 offset: 0 %}
 				  <div class="post-list-item">
