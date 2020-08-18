@@ -291,10 +291,11 @@ blockquote{
 
 /* TOP NAVIGATION START */
 nav {
-	font-size: 1.1rem !important;
-	font-weight: 500 !important;
+	font-size: 1rem !important;
+	font-weight: 300 !important;
 	font-family: 'Lato', sans-serif !important;
 	text-shadow: 0 1px 3px rgba(0,0,0,0.5) !important;
+	height: 60px !important;
 }
 
 nav ul > li.nav-item {
@@ -354,4 +355,3 @@ a {
 a.nav-link.site-bottom-border:hover {
 	color: #018a7a !important;
 }
-
