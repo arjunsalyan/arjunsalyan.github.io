@@ -168,7 +168,7 @@ p {
 }
 
 div.post-content p, div.post-content ul, div.post-content ol {
-	color: #ddd !important;
+	color: #e2e2e2 !important;
 	font-size: 21px !important;
 	line-height: 1.5em !important;
 	font-weight: 300 !important;
@@ -355,3 +355,26 @@ a {
 a.nav-link.site-bottom-border:hover {
 	color: #018a7a !important;
 }
+
+.pagination a, .pagination span {
+    padding: 7px 12px;
+	border-radius: 8px;
+    margin-left: 2px;
+    margin-right: 2px;
+    background-color: #666;
+	display: inline-block;
+	-webkit-transition: background-color 0.5s;
+    -moz-transition:    background-color 0.5s;
+    -ms-transition:     background-color 0.5s;
+    -o-transition:      background-color 0.5s;
+    transition:         background-color 0.5s;
+  }
+
+.pagination a:hover {    
+    background-color: #000;
+    color: #018a7a;
+ }
+
+.pagination {
+    text-align: center;
+ }

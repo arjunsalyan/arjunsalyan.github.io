@@ -7,7 +7,7 @@ home: True
   <div class="row">
     <div class="col-md-7 bg-article rounded py-4">
       <h2 class="text-dark">Latest Posts</h2>
-      {% for post in site.posts %}
+      {% for post in site.posts limit:5 offset: 0 %}
       <div class="post-list-item">
             <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
             <p style="font-size: 14px !important;" class="text-muted post-list-meta my-1">
@@ -20,6 +20,7 @@ home: True
         </div>
     <hr>
   {% endfor %}
+        <a href="/blog/" class="btn btn-secondary">View all posts</a>
     </div>
     <div class="col-md-5 mt-2 mt-md-0">
       <div class="rounded-lg py-4 px-3">

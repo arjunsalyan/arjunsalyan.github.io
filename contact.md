@@ -6,9 +6,9 @@ permalink: /contact/
 
 I would love to hear from you, be it a suggestion, feedback, query or criticism. I like the idea of having a discussion.
 
-**To contact me, please use any, literally any page with comments, use my social handles or simply email me.**
+**To contact me, please use any page with comments, use my social handles or simply email me.**
 
-Shall I also add a contact form on this page? I don't know, maybe it would be convenient, but sounds too formal.
+Should I also add a contact form on this page? I don't know, maybe it would be convenient, but sounds too formal.
 
 <a href="https://www.linkedin.com/in/arjunsalyan">LinkedIn</a><br>
 <a href="https://www.github.com/arjunsalyan">GitHub</a><br>
