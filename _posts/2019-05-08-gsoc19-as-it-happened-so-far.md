@@ -2,7 +2,7 @@
 layout: post
 title: "GSoC'19: As it Happened So Far"
 image: gsoc19.png
-categories: GSoC'19
+categories: GSoC
 excerpt: "MacPorts accepted my proposal for GSoC'19. Here is a little about the project and how the journey has been through the application period"
 comments: true
 ---
