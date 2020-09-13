@@ -1,6 +1,7 @@
 body {
     color: #bebebe;
 	background-color: #333;
+	background-image: url("/images/black-orchid.png");
 }
 
 .btn-outline-secondary {
@@ -13,7 +14,7 @@ body {
 }
 
 .navbar-light {
-    background-color: #2b2b2b !important
+    background-color: #363636 !important
 }
 
 .bg-light {
@@ -356,7 +357,7 @@ a.nav-link.site-bottom-border:hover {
 	color: #018a7a !important;
 }
 
-.pagination a, .pagination span {
+.pagination a, .pagination {
     padding: 7px 12px;
 	border-radius: 8px;
     margin-left: 2px;
@@ -373,6 +374,15 @@ a.nav-link.site-bottom-border:hover {
 .pagination a:hover {    
     background-color: #000;
     color: #018a7a;
+ }
+
+ .pagination a.disabled {
+	background-color: #666 !important;
+	color: #bebebe !important;
+ }
+
+ .pagination a.disabled:hover {
+	background-color: #666;
  }
 
 .pagination {
