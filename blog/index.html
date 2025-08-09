@@ -4,52 +4,63 @@ layout: blog
 ---
 
 {% for post in paginator.posts %}
-<article class="post-list-item">
-    <div class="row">
-        <div class="col-lg-4 col-md-4 text-center">
-            <img src="{{ site.baseurl }}/images/posts/{{ post.image }}" style="max-width:65%">
-        </div>
-        <div class="col-lg-8 col-md-8 post-list-item">
-            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-            <p style="font-size: 13px !important;" class="text-muted post-list-meta my-1">
-                {% for category in post.categories %}
-                <a href="/category/{{ category}}"><i>{{ category }}</i></a>
-                {% unless forloop.last %}, {% endunless %}
-                {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
-            </p>
-            <p>{{ post.excerpt }}</p>
-        </div>
+<article class="blog-post-card">
+  <div class="post-card-header">
+    <h2 class="post-card-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </h2>
+    <div class="post-card-meta">
+      <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+      <div class="post-categories">
+        {% for category in post.categories %}
+          <a href="/category/{{ category }}" class="post-category">{{ category }}</a>
+        {% endfor %}
+      </div>
     </div>
+  </div>
+  
+  <div class="post-card-content">
+    <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+    <a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">Continue reading →</a>
+  </div>
 </article>
-<hr>
 {% endfor %}
 
-<!-- pagination -->
-<div class="text-center">
-  {% if paginator.total_pages > 1 %}
-  <p class="mt-1 mb-0 pb-0">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  <div class="pagination mt-1 mb-3 px-0">
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+<div class="blog-pagination">
+  <div class="pagination-info">
+    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  </div>
+  
+  <div class="pagination-controls">
     {% if paginator.previous_page %}
-      <a class="float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&laquo; Prev</a>
+      <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn pagination-prev">
+        ← Previous
+      </a>
     {% else %}
-      <a class="disabled text-secondary">&laquo; Prev</a>
+      <span class="pagination-btn pagination-prev disabled">← Previous</span>
     {% endif %}
-  
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-      <a class="disabled text-secondary">{{ page }}</a>
-      {% elsif page == 1 %}
-        <a href="/blog/">{{ page }}</a>
-      {% else %}
-        <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      {% endif %}
-    {% endfor %}
-  
+    
+    <div class="pagination-numbers">
+      {% for page in (1..paginator.total_pages) %}
+        {% if page == paginator.page %}
+          <span class="pagination-number active">{{ page }}</span>
+        {% elsif page == 1 %}
+          <a href="/blog/" class="pagination-number">{{ page }}</a>
+        {% else %}
+          <a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="pagination-number">{{ page }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    
     {% if paginator.next_page %}
-      <a class="float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
+      <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pagination-btn pagination-next">
+        Next →
+      </a>
     {% else %}
-    <a class="disabled text-secondary">Next &raquo;</a>
+      <span class="pagination-btn pagination-next disabled">Next →</span>
     {% endif %}
   </div>
-  {% endif %}
-  </div>
+</div>
+{% endif %}

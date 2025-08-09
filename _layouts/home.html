@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  {% include analytics.html %}
+  {% include meta.html %}
+</head>
+<body>
+  <!-- Newspaper Header -->
+  <header class="newspaper-header">
+    <div class="container">
+      <div class="header-meta">
+        <span class="date">{{ "now" | date: "%A, %B %d, %Y" }}</span>
+        <span class="location">Platform Engineering & DevOps</span>
+      </div>
+              <h1 class="masthead"><a href="/">ARJUN SALYAN</a></h1>
+      <div class="tagline">SYSTEMS CRAFTSMAN, PRAGMATIC ENGINEER!</div>
+      
+      <!-- Navigation -->
+      <nav class="main-nav">
+        <a href="/" class="nav-item active">HOME</a>
+        <a href="/about/" class="nav-item">ABOUT</a>
+        <a href="/blog/" class="nav-item">ARTICLES</a>
+        <a href="/contact/" class="nav-item">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="newspaper-main">
+    <div class="container">
+      <!-- Lead Story / Hero -->
+      <section class="lead-story">
+        <div class="story-grid">
+          <div class="lead-content">
+            <h2 class="lead-headline">Advocating Platform Engineering at Scale!</h2>
+            <p class="lead-byline">Currently architecting systems & developer platforms at Wishlink, previously scaled clouds for internet scale.</p>
+            <div class="lead-body">
+              <p>I believe in treating infrastructure as a craft. In my role leading platform architecture at Wishlink, I apply this philosophy to build elegant and robust systems from the ground up.</p>
+              <p>My approach is shaped by a strong engineering foundation and experience tackling internet-scale traffic. My focus is on creating platforms for best developer experience, extreme operational excellence, pocket friendliness and unmatched production reliability.</p>
+            </div>
+            <div class="story-meta">
+              <span class="author">Last updated: August 09, 2025</span>
+              <span class="social-links">
+                <a href="https://github.com/arjunsalyan" target="_blank">GitHub</a> |
+                <a href="https://linkedin.com/in/arjunsalyan" target="_blank">LinkedIn</a> |
+                <a href="https://twitter.com/arjun_salyan" target="_blank">Twitter</a>
+              </span>
+            </div>
+          </div>
+          <div class="lead-image">
+            <img src="/images/arjun_circle.png" alt="Arjun Salyan" />
+            <div class="image-caption">Arjun Salyan, Platform Engineer at Wishlink</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Three Column Layout -->
+      <section class="three-column">
+        <!-- Career Timeline Column -->
+        <div class="timeline-column">
+          <h3 class="column-header timeline-header">CAREER JOURNEY</h3>
+          <div class="timeline-path">
+            
+            <div class="timeline-entry current">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="role-title">Platform Engineer</div>
+                <div class="company-name">Wishlink</div>
+                <div class="time-period">2024 - Present</div>
+                <div class="role-description">Scaling systems at the speed of light!</div>
+              </div>
+            </div>
+            
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="role-title">SDE-3, DevOps</div>
+                <div class="company-name">Meesho</div>
+                <div class="time-period">2022 - 2024</div>
+                <div class="role-description">Served 5M Requests Per Second</div>
+              </div>
+            </div>
+            
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="role-title">Senior SDE</div>
+                <div class="company-name">MTX Group</div>
+                <div class="time-period">2021 - 2022</div>
+                <div class="role-description">Entire infrastructure from scratch</div>
+              </div>
+            </div>
+            
+            <div class="timeline-entry">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <div class="role-title">GSoC Contributor x 2</div>
+                <div class="company-name">MacPorts</div>
+                <div class="time-period">2019 & 2020</div>
+                <div class="role-description">Open source foundations</div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <div class="timeline-note">
+            ...and freelancing projects since high-school that I have not kept a count of.
+          </div>
+        </div>
+
+        <!-- Technical Expertise Column -->
+        <div class="expertise-column">
+          <h3 class="column-header expertise-header">TECHNICAL MASTERY</h3>
+          
+          <div class="expertise-categories">
+            <div class="expertise-category">
+              <div class="category-icon">☁️</div>
+              <div class="category-content">
+                <h4>Cloud Architecture</h4>
+                <p>Multi-cloud strategies, enterprise-scale advanced Kubernetes and load balancing without tears.</p>
+              </div>
+            </div>
+            
+            <div class="expertise-category">
+              <div class="category-icon">🔧</div>
+              <div class="category-content">
+                <h4>Platform Engineering</h4>
+                <p>Developer experience, CI/CD and platforms to make working and tuning things easier.</p>
+              </div>
+            </div>
+
+            <div class="expertise-category">
+              <div class="category-icon">📊</div>
+              <div class="category-content">
+                <h4>Data & MLOps</h4>
+                <p>High volume production databases, Lakehouse and Big Data, MLOps and AI without burning pockets.</p>
+              </div>
+            </div>
+            
+            <div class="expertise-category">
+              <div class="category-icon">📊</div>
+              <div class="category-content">
+                <h4>Observability & SRE</h4>
+                <p>Monitoring systems, incident response, and reliability engineering practices</p>
+              </div>
+            </div>
+            
+            <div class="expertise-category">
+              <div class="category-icon">🛡️</div>
+              <div class="category-content">
+                <h4>Security & Compliance</h4>
+                <p>Zero-trust architectures, vulnerability management, and automated compliance.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="metrics-showcase">
+            <div class="metric">
+              <span class="metric-value">12+ Years</span>
+              <span class="metric-label">Writing Code</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">8+ Years</span>
+              <span class="metric-label">AWS & GCP</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">5+ Years</span>
+              <span class="metric-label">Internet Sclae</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Latest Articles Column -->
+        <div class="articles-column">
+          <h3 class="column-header articles-header">LATEST POSTS</h3>
+          <div class="news-divider"></div>
+          
+          {% for post in site.posts limit:3 %}
+          <article class="article-preview">
+            <div class="article-meta">
+              <span class="publish-date">{{ post.date | date: "%b %d" }}</span>
+              <div class="article-categories">
+                {% for category in post.categories %}
+                  <span class="article-tag">{{ category }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            <h4 class="article-title">
+              <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h4>
+            <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+            <a href="{{ site.baseurl }}{{ post.url }}" class="read-article">Continue reading →</a>
+          </article>
+          {% endfor %}
+          
+          <div class="all-articles-link">
+            <a href="/blog/" class="view-all-articles">View all articles</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  {% include footer.html %}
+</body>
+</html>
+</html>

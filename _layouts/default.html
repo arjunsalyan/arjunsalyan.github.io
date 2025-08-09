@@ -2,112 +2,11 @@
 <html lang="en">
   <head>
     {% include analytics.html %}
-	  {% include meta.html %}
+    {% include meta.html %}
   </head>
-  <body class="body">
-	{% include nav.html %}
-	<div class="container mt-lg-2 pt-4">
-		<h1 class="display-3 text-center text-dark">Hi, I am Arjun!</h1>
-		<p class="text-center text-secondary">Software Craftsman, Systems Architect!</p>
-		<br>
-		<div class="row" style="margin-top: 60px;">
-			<div class="col-md-6 col-12 mt-2">
-				<div class="rounded bg-light">
-					<div class="row">
-						<div class="col-12 text-center">
-							<div style="height: 60px;">
-							<img style="margin-top: -60px ;" height="148px" src="/images/arjun_circle.png">
-						</div>
-						</div>
-						<div class="col-12 p-4 text-md-left text-center">
-							<h4 class="text-dark mb-4 px-1 font-weight-bold">A little about me...</h5>
-							<p class="text-secondary px-1" style="font-size: 1.1rem !important">
-								I believe in treating infrastructure as a craft. In my role leading platform architecture at Wishlink, 
-								I apply this philosophy to build elegant and robust systems from the ground up. My approach is shaped by a 
-								strong engineering foundation and an experience tackling internet-scale traffic. My focus is on creating powerful platforms 
-								that break the norms.
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 col-12 text-center mt-2">
-				<div style="height: 100%;" class="bg-light rounded">
-					<div class="row">
-						<div class="col-12">
-							<ul class="nav flex-column mt-1">
-								<li class="nav-item my-2">
-								<a class="nav-link site-bottom-border text-warning" href="/blog">Continue to my blog</a>
-								</li>
-								<li class="nav-item my-2">
-								<a class="nav-link site-bottom-border text-warning" href="/projects">Projects</a>
-								</li>
-								<li class="nav-item my-2">
-								<a class="nav-link site-bottom-border text-warning" href="/about">About me</a>
-								</li>
-								<li class="nav-item my-2">
-									<a class="nav-link site-bottom-border text-warning" href="/contact">Let's Connect?</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-12">
-							<div class="social-icons-hero my-2">
-								<a target="_blank" href="https://www.github.com/arjunsalyan" class="mx-3"><i class="fab fa-github"></i></a>
-								<a target="_blank" href="https://www.linkedin.com/in/arjunsalyan" class="mx-3"><i class="fab fa-linkedin"></i></a>
-								<a target="_blank" href="https://www.twitter.com/arjun_salyan" class="mx-3"><i class="fab fa-twitter"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<br>
-	</div>
-		<div class="container py-4">
-		<h3 class="text-center text-dark">My Advanced Technical Stack</h3>
-		<div class="row text-center">
-			<div class="col-md-3 mt-3">
-				<div style="height: 100%;" class="col-12 rounded-lg bg-light py-2 shadow">
-				<h5 class="text-underlined text-warning">Languages</h5>
-				<p class="my-0">Python</p>
-				<p class="my-0">C++</p>
-				<p class="my-0">Go</p>
-				<p class="my-0">Java</p>
-				</div>
-			</div>
-			<div class="col-md-3 mt-3">
-				<div style="height: 100%;" class="col-12 bg-light rounded-lg py-2 shadow">
-				<h5 class="text-underlined text-warning">DevOps & Cloud</h5>
-				<p class="my-0">AWS, GCP</p>
-				<p class="my-0">Kubernetes</p>
-				<p class="my-0">Terraform, Ansible</p>
-				<p class="my-0">Jenkins, ArgoCD, GitLab</p>
-				<p class="my-0">Cilium, Envoy</p>
-				<p class="my-0">Victoriametrics</p>
-				</div>
-			</div>
-			<div class="col-md-3 mt-3">
-				<div style="height: 100%;" class="col-12 bg-light rounded-lg py-2 shadow">
-				<h5 class="text-underlined text-warning">Frameworks</h5>
-				<p class="my-0">Django</p>
-				<p class="my-0">SpringBoot</p>
-				<p class="my-0">Gin</p>
-				</div>
-			</div>
-			<div class="col-md-3 mt-3">
-				<div style="height: 100%;" class="col-12 bg-light rounded-lg py-2 shadow">
-				<h5 class="text-underlined text-warning">DBs & Related</h5>
-				<p class="my-0">PostgreSQL</p>
-				<p class="my-0">Redis, Etcd</p>
-				<p class="my-0">Solr</p>
-				<p class="my-0">Cassandra</p>
-				<p class="my-0">Clickhouse</p>
-				</div>
-			</div>
-		</div>
-	</div>
-	  
-{{content}}
-                {% include footer.html %}
+  <body class="theme-light">
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
   </body>
 </html>

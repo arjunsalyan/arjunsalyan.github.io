@@ -1,18 +1,67 @@
 <!doctype html>
 <html lang="en">
   <head>
-      {% include analytics.html %}
+    {% include analytics.html %}
     {% include meta.html %}
   </head>
-  <body>
-		{% include nav.html %}				
-		<div class="container shadow text-center" style="padding: 20px;">
-        <h1 class="heading-site">Blog</h1>
-        <p>You are now viewing all the posts. You can also filter the posts by categories.</p>
-		</div>
-    <div class="container">
-    	{{ content }}
-    </div>
-	{% include footer.html %}
+  <body class="theme-light">
+    <!-- Header -->
+    <header class="newspaper-header">
+      <div class="container">
+        <div class="header-meta">
+          <span class="date">{{ "now" | date: "%B %d, %Y" }}</span>
+          <span class="location">Platform Engineering Blog</span>
+        </div>
+        <h1 class="masthead"><a href="/">ARJUN SALYAN</a></h1>
+        <p class="tagline">SYSTEMS CRAFTSMAN, PRAGMATIC ENGINEER!</p>
+        
+        <!-- Navigation -->
+        {% include nav.html %}
+      </div>
+    </header>
+
+    <!-- Blog Content -->
+    <main class="article-main">
+      <div class="container">
+        <div class="blog-layout-single">
+          <!-- Main Content -->
+          <div class="blog-main-single">
+            <!-- Blog Header -->
+            <div class="blog-header">
+              <div class="breadcrumb">
+                <a href="/">Home</a> &nbsp;&nbsp;→&nbsp;&nbsp; <span>All Articles</span>
+              </div>
+              
+              <h1 class="blog-title">All Articles</h1>
+              <p class="blog-description">Insights on platform engineering, DevOps, and infrastructure from the field</p>
+            </div>
+
+            <!-- Blog Posts -->
+            <div class="blog-posts">
+              {{ content }}
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="blog-sidebar">
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Categories</h3>
+              <div class="sidebar-divider"></div>
+              
+              <div class="category-links">
+                <a href="/blog/" class="category-link">All Posts</a>
+                {% for category in site.categories %}
+                  <a href="/category/{{ category[0] }}" class="category-link">
+                    {{ category[0] }} <span class="category-count">({{ category[1].size }})</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
   </body>
 </html>

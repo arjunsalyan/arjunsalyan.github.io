@@ -1,40 +1,107 @@
 <!doctype html>
 <html lang="en">
   <head>
-      {% include analytics.html %}
+    {% include analytics.html %}
     {% include meta.html %}
   </head>
-  <body>
-		{% include nav.html %}				
-		<div class="container bg-site shadow text-center" style="padding: 20px;">
-        <h1 class="heading-site">Category: <span class="text-underlined">{{page.category}}</span></h1>
-        <p>You are now viewing the posts published under {{ page.category }}.</p>
-		</div>
-                <div class="container">
-                    {{ content }}
-					<br>
-                    {% for post in site.categories[page.category] %}
-                    <article class="post-list-item">
-                      <div class="row">
-                        <div class="col-lg-4 col-md-4 text-center">
-                          <img src="{{ site.baseurl }}/images/posts/{{ post.image }}" style="max-width:65%">
-                        </div>
-                        <div class="col-lg-8 col-md-8 post-list-item">
-                            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-                            <p style="font-size: 13px !important;" class="text-muted post-list-meta my-1">
-                              {% for category in post.categories %}
-                                <a href="/category/{{ category}}"><i>{{ category }}</i></a>
-                                  {% unless forloop.last %}, {% endunless %}
-                              {% endfor %} | {{ post.date | date: "%B %e, %Y" }}
-                            </p>
-                              <p>{{ post.excerpt }}</p>
-                        </div>
-                      </div>
-                    </article>
-                    <hr>
-                  {% endfor %}
+  <body class="theme-light">
+    <!-- Header -->
+    <header class="newspaper-header">
+      <div class="container">
+        <div class="header-meta">
+          <span class="date">{{ "now" | date: "%B %d, %Y" }}</span>
+          <span class="location">Platform Engineering Blog</span>
+        </div>
+        <h1 class="masthead"><a href="/">ARJUN SALYAN</a></h1>
+        <p class="tagline">SYSTEMS CRAFTSMAN, PRAGMATIC ENGINEER!</p>
+        
+        <!-- Navigation -->
+        {% include nav.html %}
+      </div>
+    </header>
+
+    <!-- Category Content -->
+    <main class="article-main">
+      <div class="container">
+        <div class="blog-layout">
+          <!-- Main Content -->
+          <div class="blog-main">
+            <!-- Category Header -->
+            <div class="category-header">
+              <div class="breadcrumb">
+                <a href="/">Home</a> &nbsp;&nbsp;→&nbsp;&nbsp; <a href="/blog/">Articles</a> &nbsp;&nbsp;→&nbsp;&nbsp; <span>{{ page.category }}</span>
+              </div>
+              
+              <h1 class="category-title">{{ page.category }}</h1>
+              <p class="category-description">All articles in the {{ page.category }} category</p>
+            </div>
+
+            <!-- Category Posts -->
+            <div class="category-posts">
+              {% for post in site.categories[page.category] %}
+              <article class="blog-post-card">
+                <div class="post-card-header">
+                  <h2 class="post-card-title">
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                  </h2>
+                  <div class="post-card-meta">
+                    <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+                    <div class="post-categories">
+                      {% for category in post.categories %}
+                        <a href="/category/{{ category }}" class="post-category">{{ category }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
                 </div>
-				<br><br>
-				{% include footer.html %}
+                
+                <div class="post-card-content">
+                  <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+                  <a href="{{ site.baseurl }}{{ post.url }}" class="read-more-link">Continue reading →</a>
+                </div>
+              </article>
+              {% endfor %}
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <div class="blog-sidebar">
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">All Categories</h3>
+              <div class="sidebar-divider"></div>
+              
+              <div class="category-links">
+                <a href="/blog/" class="category-link">All Posts</a>
+                {% for category in site.categories %}
+                  <a href="/category/{{ category[0] }}" class="category-link {% if page.category == category[0] %}active{% endif %}">
+                    {{ category[0] }} <span class="category-count">({{ category[1].size }})</span>
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+            
+            <div class="sidebar-section">
+              <h3 class="sidebar-title">Recent Posts</h3>
+              <div class="sidebar-divider"></div>
+              
+              {% for post in site.posts limit:5 %}
+              <article class="sidebar-post">
+                <h4><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h4>
+                <div class="sidebar-post-meta">
+                  <span class="sidebar-date">{{ post.date | date: "%b %d" }}</span>
+                  <div class="sidebar-categories">
+                    {% for category in post.categories %}
+                      <span class="sidebar-tag">{{ category }}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+              </article>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
   </body>
 </html>

@@ -1,20 +1,6 @@
-<nav class="navbar navbar-expand navbar-light">
-    <div class="container">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item {% if page.url == '/' %}active{% endif %}">
-                    <a class="nav-link" href="/">HOME</a>
-                </li>
-                <li class="nav-item mx-2 d-none d-md-block {% if page.url == '/about/' %}active{% endif %}">
-                    <a class="nav-link" href="/about/">ABOUT</a>
-                </li>
-                <li class="nav-item mx-2 d-none d-md-block {% if page.url == '/contact/' %}active{% endif %}">
-                    <a class="nav-link" href="/contact/">CONTACT</a>
-                </li>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item mr-2">
-                    <a href="/blog/" class="btn {% if page.url == '/blog/' %}btn-warning{% else %}btn-outline-warning{% endif %}">BLOG</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+<nav class="main-nav">
+  <a href="/" class="nav-item {% if page.url == '/' %}active{% endif %}">HOME</a>
+  <a href="/about" class="nav-item {% if page.url == '/about/' or page.url == '/about.html' %}active{% endif %}">ABOUT</a>
+  <a href="/blog/" class="nav-item {% if page.url contains '/blog/' or page.url contains '/category/' or page.layout == 'post' or page.layout == 'blog' or page.layout == 'category' %}active{% endif %}">ARTICLES</a>
+  <a href="/contact" class="nav-item {% if page.url == '/contact/' or page.url == '/contact.html' %}active{% endif %}">CONTACT</a>
+</nav>

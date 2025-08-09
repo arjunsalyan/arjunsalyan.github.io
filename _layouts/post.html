@@ -1,56 +1,92 @@
 <!doctype html>
 <html lang="en">
   <head>
-		{% include analytics.html %}
+    {% include analytics.html %}
     {% include meta.html %}
   </head>
-  <body>
-	{% include nav.html %}
-	<div class="container mt-md-4">
-		<div class="row">
-		<div class="col-md-8 bg-article rounded-lg py-4">
-			<h1>{{page.title}}</h1>
-			<div class="post-meta py-2 px-3 mb-2 mt-3" style="box-shadow: inset 0 3px 10px rgba(0,0,0,0.4); background-color: #7d3934; margin-left: -16px; margin-right: -16px">
-				<p class="post-meta-avatar mb-0">
-		  			<span></span>
-		  			<span><img src="/images/arjun_circle.png" style="height:50px"></span>
-				</p>
-				<p class="post-meta-text text-secondary mb-0">
-					<span></span>
-					<span style="font-size: 17px;"><span class="text-warning">Arjun Salyan</span> | {{ page.date | date: "%B %e, %Y" }}<br>
-					<strong>Categories:</strong>
-					{% for category in page.categories %}
-						<a href="/category/{{ category}}">{{ category }}</a>{% unless forloop.last %}, {% endunless %}
-					{% endfor %}
-					</span>
-				</p>
-	  		</div>
-			<div class="post-content">
-				{{content}}
-			</div>
-			<br>
-			<div id="disqus_thread"></div>
-		</div>
-	</div>
-</div>
-			{% include footer.html %}
-<script>
+  <body class="theme-light">
+    <!-- Header -->
+    <header class="newspaper-header">
+      <div class="container">
+        <div class="header-meta">
+          <span class="date">{{ "now" | date: "%B %d, %Y" }}</span>
+          <span class="location">Platform Engineering Blog</span>
+        </div>
+        <h1 class="masthead"><a href="/">ARJUN SALYAN</a></h1>
+        <p class="tagline">SYSTEMS CRAFTSMAN, PRAGMATIC ENGINEER!</p>
+        
+        <!-- Navigation -->
+        {% include nav.html %}
+      </div>
+    </header>
 
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+    <!-- Article Content -->
+    <main class="article-main post-layout">
+      <div class="container">
+        <!-- Article Header -->
+        <article class="article-header">
+          <div class="breadcrumb">
+            <a href="/">Home</a> &nbsp;&nbsp;→&nbsp;&nbsp; <a href="/blog/">Articles</a> &nbsp;&nbsp;→&nbsp;&nbsp; <span>{{ page.title }}</span>
+          </div>
+          
+          <h1 class="article-title">{{ page.title }}</h1>
+          
+          <div class="article-byline">
+            <div class="author-info">
+              <img src="/images/arjun_circle.png" alt="Arjun Salyan" class="author-avatar">
+              <div class="author-details">
+                <span class="author-name">Arjun Salyan</span>
+                <span class="publish-date">{{ page.date | date: "%B %d, %Y" }}</span>
+              </div>
+            </div>
+            <div class="article-categories">
+              {% for category in page.categories %}
+                <a href="/category/{{ category }}" class="category-tag">{{ category }}</a>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
 
-var disqus_config = function () {
-	this.page.url = "https://arjunsalyan.github.io{{ page.url }}";  // Replace PAGE_URL with your page's canonical URL variable
-	this.page.identifier = "{{ page.id }}"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://arjunsalyan.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <!-- Article Body -->
+        <div class="article-body">
+          {{ content }}
+        </div>
+
+        <!-- Article Footer -->
+        <div class="article-footer">
+          <div class="author-signature">
+            <div class="signature-line"></div>
+            <p>Written by <strong>Arjun Salyan</strong>, Platform Engineer at Wishlink</p>
+            <div class="social-links">
+              <a href="https://linkedin.com/in/arjunsalyan" target="_blank">LinkedIn</a>
+              <a href="https://github.com/arjunsalyan" target="_blank">GitHub</a>
+              <a href="https://twitter.com/arjunsalyan" target="_blank">Twitter</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Comments -->
+        <div class="comments-section">
+          <h3>Comments</h3>
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+    <script>
+      var disqus_config = function () {
+        this.page.url = "https://arjunsalyan.github.io{{ page.url }}";
+        this.page.identifier = "{{ page.id }}";
+      };
+      (function() {
+        var d = document, s = d.createElement('script');
+        s.src = 'https://arjunsalyan.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
   </body>
 </html>
