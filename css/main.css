@@ -1162,7 +1162,7 @@ a:hover {
 /* Blog Layout for All Posts Page (Single Sidebar) */
 .blog-layout-single {
   display: grid;
-  grid-template-columns: 1fr 280px;
+  grid-template-columns: 1fr 320px;
   gap: 35px;
 }
 
@@ -1500,6 +1500,14 @@ footer a {
     gap: 20px;
   }
   
+  .date {
+    display: none;
+  }
+  
+  .lead-byline {
+    display: none;
+  }
+  
   .story-grid {
     grid-template-columns: 1fr;
     gap: 20px;
@@ -1507,6 +1515,10 @@ footer a {
   
   .lead-image {
     order: -1;
+  }
+  
+  .lead-image img {
+    max-width: 200px;
   }
   
   .lead-headline {
@@ -1565,9 +1577,7 @@ footer a {
     gap: 2rem;
   }
   
-  .page-sidebar {
-    order: -1;
-  }
+  /* Remove order override for page sidebar - let it stay after content */
   
   .blog-layout {
     grid-template-columns: 1fr;
@@ -1579,9 +1589,7 @@ footer a {
     gap: 2rem;
   }
   
-  .blog-sidebar {
-    order: -1;
-  }
+  /* Remove order override for blog sidebar on all posts page - let it stay after content */
   
   .blog-title {
     font-size: 2rem;
